@@ -1,0 +1,280 @@
+@font-face {
+    font-family: fontegrossa;
+    src: url(FormaDJRMicro-Bold.ttf);
+
+ }
+ @font-face {
+    font-family: fontefina;
+    src: url(FormaDJRMicro-Light.ttf);
+ }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+
+@keyframes slidein {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input::selection {
+    background-color: white;
+    color: black;
+}
+
+.container-fluid {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    animation: slidein 1.5s ease-in-out;
+}
+
+.login-box {
+    width: 100vw;
+    z-index: 999;
+    height: 45vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-group input {
+    all: unset;
+    font-family: fontefina;
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+.input-group input:focus {
+    background-color: black;
+    color: white;
+}
+
+
+.input-group {
+    width: 90vw;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mb-3 {
+    margin-bottom: 10px !important;
+}
+
+.input-group-append,
+.input-group-append span {
+    all: unset;
+    background-color: black;
+    color: white;
+    z-index: 3;
+}
+
+.input-group-append span {
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+form,
+input {
+    color: rgb(255, 255, 255) !important;
+    font-weight: lighter !important;
+}
+
+input::placeholder {
+    color: rgb(134, 134, 134) !important;
+}
+
+
+p {
+    color: black;
+    font-family: fontefina;
+    letter-spacing: auto;
+    font-weight: bolder;
+    margin-bottom: 9px;
+}
+
+h1 {
+    color: white;
+    font-family: fontegrossa;
+    letter-spacing: -6px;
+    position: absolute;
+    bottom: 43vh;
+    left: 7vw;
+    font-size: 4.5em;
+    font-weight: bolder;
+    margin: none;
+    padding: none;
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-5%);
+}
+
+.prod {
+    color: rgb(177, 177, 177);
+    font-weight: lighter;
+    position: absolute;
+    bottom: 2vh;
+    font-size: 0.9em;
+}
+
+svg {
+    height: 25px;
+    width: 25px;
+}
+
+.main-text {
+    color: white;
+    position: absolute;
+    font-weight: lighter;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15vh;
+    width: 100vw;
+    z-index: 5;
+}
+
+
+nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bg {
+    width: 125vw;
+    transform: translateX(-25px);
+    opacity: 15%;
+    position: absolute;
+}
+.cadastro{
+
+    margin-top: 30px;
+}
+.cadastro span{
+    font-family: fontegrossa;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    font-family: fontefina;
+    letter-spacing: auto;
+    transition: .3s;
+    font-size: 1em;
+}
+
+a:hover {
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+}
+
+.logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 5vw;
+}
+
+.mobile-text {
+    color: white;
+    position: absolute;
+    left: 10vw;
+    top: 25vh;
+    font-weight: light;
+    font-size: 1.1em
+}
+
+
+@media screen and (min-width: 768px) {
+    .input-group {
+        width: 30vw;
+    }
+
+    h1 {
+        left: 50%;
+        top: 25vh;
+        font-size: 9.5em;
+        transform: translateX(-50%);
+    }
+
+    .main-text {
+        color: white;
+        top: 45vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mobile-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        display: none;
+    }
+    .main-text {
+        display: none;
+    }
+}
